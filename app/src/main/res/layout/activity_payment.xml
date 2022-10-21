@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/coffeeLight">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pickuptitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Enter Pickup Info"
+                android:textSize="30dp"
+                android:textColor="@color/coffeeDark"
+                android:textStyle="bold|italic"/>
+
+            <TextView
+                android:id="@+id/pickupfullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Full name"
+                android:textSize="20dp"
+                android:textColor="@color/coffeeDark"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/pickupinputname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:hint="i.e. John Due"
+                android:digits="@string/inputStringPaymentFullName"
+                android:imeOptions="actionDone"
+                android:maxLength="40"
+                android:textColor="@color/coffeeDark"/>
+
+            <TextView
+                android:id="@+id/pickupnumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Phone Number"
+                android:textSize="20dp"
+                android:textColor="@color/coffeeDark"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/pickupinputnumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:hint="444-444-4444"
+                android:maxLength="10"
+                android:inputType="number"
+                android:imeOptions="actionDone"
+                android:textColor="@color/coffeeDark"/>
+
+            <TextView
+                android:id="@+id/pickuptime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Pickup Time"
+                android:textSize="20dp"
+                android:textColor="@color/coffeeDark"
+                android:textStyle="bold"/>
+            <TimePicker
+                android:id="@+id/orderPickupTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner"
+                android:textColor="@color/coffeeDark"/>
+
+            <LinearLayout
+                android:id="@+id/paymentinfo1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/paymenttittle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="Enter Payment Info"
+                    android:textSize="30dp"
+                    android:textColor="@color/coffeeDark"
+                    android:textStyle="bold|italic"/>
+
+                <TextView
+                    android:id="@+id/paymentcardtittle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="Card Type"
+                    android:textSize="20dp"
+                    android:textColor="@color/coffeeDark"
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:layout_margin="15dp"
+                    android:id="@+id/paymentspinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/coffeeDark"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/paymentinfo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/paymentcardnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="Card Number"
+                    android:textSize="20dp"
+                    android:textColor="@color/coffeeDark"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/cardnumberinput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:hint="1234123412341234"
+                    android:maxLength="16"
+                    android:inputType="number"
+                    android:imeOptions="actionDone"
+                    android:textColor="@color/coffeeDark"/>
+
+                <TextView
+                    android:id="@+id/paymentcardexpiry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="Card Expiry"
+                    android:textSize="20dp"
+                    android:textColor="@color/coffeeDark"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:orientation="horizontal"
+                    android:textColor="@color/coffeeDark">
+
+                    <EditText
+                        android:id="@+id/cardexpirymonth"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:hint="MM"
+                        android:maxLength="2"
+                        android:inputType="number"
+                        android:imeOptions="actionDone"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:text=" / "
+                        android:textSize="20dp"/>
+                    <EditText
+                        android:id="@+id/cardexpiryyear"
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:hint="YYYY"
+                        android:maxLength="4"
+                        android:inputType="number"
+                        android:imeOptions="actionDone"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CVV"
+                    android:textSize="20dp"
+                    android:layout_margin="15dp"
+                    android:textColor="@color/coffeeDark"
+                    android:textStyle="bold"/>
+                <EditText
+                    android:id="@+id/paymentcvv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="CVV"
+                    android:maxLength="3"
+                    android:inputType="numberPassword"
+                    android:layout_margin="15dp"
+                    android:imeOptions="actionDone"
+                    android:textColor="@color/coffeeDark"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonplaceorder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundedbutton2"
+                android:layout_margin="30dp"
+                android:enabled="false"
+                android:text="PLACE ORDER"
+                android:textSize="30dp"
+                android:onClick="placeOrder"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coffeemenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/coffeeLight"
+    android:textColor="@color/coffeeDark">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/menutitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Select a coffe"
+                android:textSize="40dp"
+                android:textStyle="bold|italic"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ToggleButton
+                        android:id="@+id/r1c1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:width="150dp"
+                        android:background="@drawable/roundedbutton2"
+                        android:textColor="@color/coffeeDark"
+                        android:textOn="Americano"
+                        android:textOff="Americano"
+                        android:text="Americano"
+                        android:onClick="coffeeSelector"/>
+
+                    <ToggleButton
+                        android:id="@+id/r2c1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/r1c1"
+                        android:layout_margin="15dp"
+                        android:width="150dp"
+                        android:background="@drawable/roundedbutton2"
+                        android:layout_weight="1"
+                        android:textColor="@color/coffeeDark"
+                        android:textOn="Latte"
+                        android:textOff="Latte"
+                        android:text="Latte"
+                        android:onClick="coffeeSelector"/>
+
+                    <ToggleButton
+                        android:id="@+id/r1c2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:width="150dp"
+                        android:layout_toRightOf="@id/r1c1"
+                        android:background="@drawable/roundedbutton2"
+                        android:textColor="@color/coffeeDark"
+                        android:textOn="Cappuccino"
+                        android:textOff="Cappuccino"
+                        android:text="Cappuccino"
+                        android:onClick="coffeeSelector"/>
+
+                    <ToggleButton
+                        android:id="@+id/r2c2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:width="150dp"
+                        android:layout_below="@id/r1c1"
+                        android:background="@drawable/roundedbutton2"
+                        android:layout_toRightOf="@id/r2c1"
+                        android:textColor="@color/coffeeDark"
+                        android:textOn="Macchiato"
+                        android:textOff="Macchiato"
+                        android:text="Macchiato"
+                        android:onClick="coffeeSelector"/>
+                </RelativeLayout>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sizetitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Select a size"
+                android:textSize="30dp"
+                android:visibility="gone"
+                android:textStyle="bold|italic"/>
+            <LinearLayout
+                android:id="@+id/sizeGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/sizeSmall"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="sizeSelector"
+                        android:text="Small"
+                        android:textSize="22dp" />
+
+                    <RadioButton
+                        android:id="@+id/sizeMedium"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="sizeSelector"
+                        android:text="Medium"
+                        android:textSize="22dp" />
+
+                    <RadioButton
+                        android:id="@+id/sizeLarge"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="sizeSelector"
+                        android:text="Large"
+                        android:textSize="22dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/extraGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Options"
+                    android:textSize="20dp"
+                    android:textStyle="bold|italic"/>
+
+                <CheckBox
+                    android:id="@+id/box_2shots"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="extraSelector"
+                    android:text="2 shots"
+                    android:textSize="20dp" />
+
+                <CheckBox
+                    android:id="@+id/box_sugar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="extraSelector"
+                    android:text="Sugar"
+                    android:textSize="18dp" />
+
+                <CheckBox
+                    android:id="@+id/box_cream"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="extraSelector"
+                    android:text="Cream"
+                    android:textSize="18dp" />
+
+                <CheckBox
+                    android:id="@+id/box_WholeMilk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="extraSelector"
+                    android:text="Whole Milk"
+                    android:textSize="18dp" />
+
+                <CheckBox
+                    android:id="@+id/box_2milk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="extraSelector"
+                    android:text="2% milk"
+                    android:textSize="18dp" />
+
+                <CheckBox
+                    android:id="@+id/box_nonFatMilk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="extraSelector"
+                    android:text="Non Fat Milk"
+                    android:textSize="18dp" />
+
+                <CheckBox
+                    android:id="@+id/box_almondMilk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="extraSelector"
+                    android:text="Almond Milk"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/continuebutton"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="30dp"
+                android:background="@drawable/roundedbutton2"
+                android:enabled="false"
+                android:padding="10dp"
+                android:text="CONTINUE"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+                android:onClick="continueToPayment" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

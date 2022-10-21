@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/coffeeLight">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/coffelogo"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:src="@drawable/cofeeshoplogo" />
+            <TextView
+                android:id="@+id/coffename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/coffeeName"
+                android:textAlignment="center"
+                android:textSize="48dp"
+                android:textColor="@color/coffeeDark"
+                android:textStyle="bold|italic"/>
+
+            <TextView
+                android:id="@+id/summaryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Order Summary"
+                android:textSize="30dp"
+                android:textColor="@color/coffeeDark"
+                android:textStyle="bold|italic"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:text="Full Name"
+                android:textSize="23dp"
+                android:textColor="@color/coffeeDark"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/summaryFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Full Name"
+                android:textSize="23dp"
+                android:textColor="@color/coffeeDark"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:text="Phone Number"
+                android:textSize="23dp"
+                android:textColor="@color/coffeeDark"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/summaryPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Phone Number"
+                android:textSize="23dp"
+                android:textColor="@color/coffeeDark"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:text="Pickup Time"
+                android:textSize="23dp"
+                android:textColor="@color/coffeeDark"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/summaryPickupTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Pickup Time"
+                android:textSize="23dp"
+                android:textColor="@color/coffeeDark"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:text="Order"
+                android:textSize="23dp"
+                android:textColor="@color/coffeeDark"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/summaryOrderDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Order"
+                android:textSize="23dp"
+                android:textColor="@color/coffeeDark"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
